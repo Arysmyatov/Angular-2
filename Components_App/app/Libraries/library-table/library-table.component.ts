@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { Library } from "./../library";
 
 @Component({
@@ -22,9 +22,13 @@ export class LibraryTable {
         return this._libraries.slice(0, this.rowsCount);
     }
 
+    @Output()
+    removeLibEvent: EventEmitter<number> = new EventEmitter();
+
     removeLib(id: number){
         this._libraries = this._libraries.filter(function(obj) {
             return obj.id !== id;
         });
+        this.removeLibEvent.emit(id);
     }
 }

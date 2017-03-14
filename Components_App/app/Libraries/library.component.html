@@ -4,4 +4,5 @@
     </div>
 </div>
 
-<library-table [rowsCount]="5" [libraries]="libraries"> </library-table>
+<library-table [rowsCount]="5" [libraries]="libraries" (removeLibEvent)="removeLibHandler($event)">
+</library-table>

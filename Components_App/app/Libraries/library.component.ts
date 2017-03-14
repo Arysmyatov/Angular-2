@@ -17,4 +17,8 @@ const LIBRARIES: Library[] = [
 export class Libraries {
     pageName: string     = "Libraries";
     libraries: Library[] = LIBRARIES;
+
+    removeLibHandler(value){
+        console.log(`It' s removed library with ${value} id`);
+    }
 }
