@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">{{pageName}}</h1>
+    </div>
+</div>
+
+<library-form> </library-form>
+
+<library-table [rowsCount]="5" [libraries]="libraries" (removeLibEvent)="removeLibHandler($event)">
+</library-table>
