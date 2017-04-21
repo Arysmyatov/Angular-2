@@ -5,21 +5,21 @@ import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
 
 import { HomeComponent } from "./home/home.component";
-import { PhraseService } from "./shared/phrase.service";
+import { LibraryService } from "./shared/library.service";
 
-import { PhrasesModule } from "./phrases/phrases.module";
+import { LibrariesModule } from "./libraries/libraries.module";
 
 @NgModule({
     imports: [
         BrowserModule,
         AppRoutingModule,
-        PhrasesModule
+        LibrariesModule
     ],
     declarations: [
         AppComponent,
         HomeComponent
     ],
-    providers: [PhraseService],
+    providers: [LibraryService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

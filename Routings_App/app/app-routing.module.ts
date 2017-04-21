@@ -3,8 +3,6 @@ import { RouterModule } from "@angular/router";
 
 import { HomeComponent } from "./home/home.component";
 
-// В данном примере настройки маршрутизации выделены в отдельный модуль.
-
 @NgModule({
     imports: [RouterModule.forRoot([
         {
@@ -14,6 +12,6 @@ import { HomeComponent } from "./home/home.component";
         },
         { path: "home", component: HomeComponent },
     ])],
-    exports: [RouterModule] // делаем re-export модуля для использования директив при маршрутизации
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }
